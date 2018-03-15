@@ -15,7 +15,7 @@ public class ParserFIX {
 		try {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Put here the FIX msg");
-			System.out.println("--------------------");
+			System.out.println("----------***----------");
 			String a = sc.nextLine();
 			parsFIX(a);
 		} catch (Exception e) {
