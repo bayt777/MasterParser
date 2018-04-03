@@ -5,8 +5,6 @@ import quickfix.InvalidMessage;
 public class ProtocolFIX44 {
 	
 	public void parseFix44(String message) throws InvalidMessage {
-		System.out.println("This is protocol FIX.4.4");
-		System.out.println("------------------------");
     	try {
     		try {
     			if(message.contains("|"));
@@ -31,11 +29,11 @@ public class ProtocolFIX44 {
     			} else if(t.startsWith("432=")) {
     				System.out.println("+ \"432=\"+expireDate+\"\"");
     			} else if(t.startsWith("52=")) {
-    				System.out.println("+ \"52=\"+DateHelper.getCurrentDateString(\"ddMMyyyy-HH:mm:ss.SSS\")+\"\"");	
+    				System.out.println("+ \"52=\"+DateHelper.DT_SHORT_WITH_MILLISECONDS_FOR_FIX_MSG+\"\"");	
     			} else if(t.startsWith("75=")) {
-    				System.out.println("+ \"75=\"+DateHelper.getCurrentDateString(\"ddMMyyyy\")+\"\"");	
+    				System.out.println("+ \"75=\"+DateHelper.DateHelper.DT_SHORTED+\"\"");	
     			} else if(t.startsWith("60=")) {
-    				System.out.println("+ \"60=\"+DateHelper.getCurrentDateString(\"ddMMyyyy-HH:mm:ss.SSS\")+\"\"");
+    				System.out.println("+ \"60=\"+DateHelper.DT_SHORT_WITH_MILLISECONDS_FOR_FIX_MSG+\"\"");
     			} else 
     				System.out.println("+ \""+ t + "\"");
     			}

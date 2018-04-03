@@ -38,5 +38,6 @@ public class ProtocolFIX50 {
         } catch (Exception e) {
             throw new InvalidMessage(e.getMessage());
         }
-	}	
+	}
+	
 }
