@@ -14,6 +14,7 @@ public class ParserFIX {
 	static String b = "close";
 	
 	 public static void main(String[] args) throws ExecutionException, NullPointerException{
+		 
 		try {
 			Scanner sc = new Scanner(System.in);
 			printTitle("Put here the FIX msg");
@@ -38,7 +39,7 @@ public class ParserFIX {
 			System.out.println("You entered wrong message");
 		}
         switch (fixStandart) {
-        case "8=FIXT.1.1" :
+        case "8=FIXT.1.1" :
         	protocolFIX50.parseFix50(msg);
 			printTitle("Enter \"close\" if you want finish the program");
         	break;
@@ -61,5 +62,4 @@ public class ParserFIX {
 		System.out.println(text);
 		System.out.println(separator);
 	}
-	
 }
