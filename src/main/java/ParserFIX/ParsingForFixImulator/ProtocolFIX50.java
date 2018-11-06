@@ -18,6 +18,8 @@ class ProtocolFIX50 {
     				System.out.println("+ \"56=FIXEXCHANGE\"     //"+ (TargetCompID.class.getTypeName()).substring(15));
     			} else if(t.startsWith("11=")) {
     				System.out.println("+ \"11=\"+clOrdID+\"\"     //"+ (ClOrdID.class.getTypeName()).substring(15));
+    			} else if(t.startsWith("41=")) {
+    				System.out.println("+ \"41=\"+origClOrdID+\"\"     //"+ (OrigClOrdID.class.getTypeName()).substring(15));
     			} else if(t.startsWith("37=")) {
     				System.out.println("+ \"37=\"+orderreferenceid+\"\"     //"+ (OrderID.class.getTypeName()).substring(15));
     			} else if(t.startsWith("38=")) {
