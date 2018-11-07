@@ -18,6 +18,8 @@ class ProtocolFIX50 {
     				System.out.println("+ \"56=FIXEXCHANGE\"     //"+ (TargetCompID.class.getTypeName()).substring(15));
     			} else if(t.startsWith("11=")) {
     				System.out.println("+ \"11=\"+clOrdID+\"\"     //"+ (ClOrdID.class.getTypeName()).substring(15));
+    			} else if(t.startsWith("14=")) {
+    				System.out.println("+ \"14=\"+cumQty+\"\"     //"+ (CumQty.class.getTypeName()).substring(15));
     			} else if(t.startsWith("41=")) {
     				System.out.println("+ \"41=\"+origClOrdID+\"\"     //"+ (OrigClOrdID.class.getTypeName()).substring(15));
     			} else if(t.startsWith("37=")) {
@@ -31,13 +33,17 @@ class ProtocolFIX50 {
     			} else if(t.startsWith("1=")) {
     				System.out.println("+ \"1=\"+ACCOUNT_NAME+\"\"     //"+ (Account.class.getTypeName()).substring(15));
     			} else if(t.startsWith("48=")) {
-    				System.out.println("+ \"48=\"+ticker+\"\"     //"+ (SecurityID.class.getTypeName()).substring(15));;
+    				System.out.println("+ \"48=\"+ticker+\"\"     //"+ (SecurityID.class.getTypeName()).substring(15));
     			} else if(t.startsWith("52=")) {
     				System.out.println("+ \"52=\"+DateHelper.getCurrentDateString(\"yyyyMMdd-HH:mm:ss.SSS\")+\"\"     //"+ (SendingTime.class.getTypeName()).substring(15));;	
     			} else if(t.startsWith("75=")) {
     				System.out.println("+ \"75=\"+DateHelper.getCurrentDateString(\"yyyyMMdd\")+\"\"     //"+ (TradeDate.class.getTypeName()).substring(15));	
     			} else if(t.startsWith("60=")) {
     				System.out.println("+ \"60=\"+DateHelper.getCurrentDateString(\"yyyyMMdd-HH:mm:ss.SSS\")+\"\"     //"+ (TransactTime.class.getTypeName()).substring(15));
+    			} else if(t.startsWith("584=")) {
+    				System.out.println("+ \"584=\"+massStatusReqID+\"\"     //"+ (MassStatusReqID.class.getTypeName()).substring(15));
+    			} else if(t.startsWith("880=")) {
+    				System.out.println("+ \"880=\"+trdMatchID+\"\"     //"+ (TrdMatchID.class.getTypeName()).substring(15));
     			} else 
     				System.out.println("+ \""+ t + "\"");
     			}
